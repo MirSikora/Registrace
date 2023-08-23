@@ -13,6 +13,7 @@
         <p class="result-text"></p>
         <input type="submit" value="Registrovat" >
     </form>
+    <script src="passwordchecker.js"></script>
     <?php 
     include "footer.php";
     ?>

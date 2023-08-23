@@ -22,7 +22,7 @@
                 $allUsers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 echo "<h3>Seznam registrovaných uživatelů:</h3>";
                 foreach($allUsers as $user){
-                    echo '<p class="users"><span><label>Jméno: </label>'.htmlspecialchars($user["name"]).' '.htmlspecialchars($user["surname"]).'</span><span><label> Přihlašovací jméno: </label>'.htmlspecialchars($user["login"]).'</span></p>';
+                    echo '<p class="users"><span><label>Jméno: </label>'.$user["name"].' '.$user["surname"].'</span><span><label> Přihlašovací jméno: </label>'.$user["login"].'</span></p>';
                 }   
             }
             mysqli_free_result($result);

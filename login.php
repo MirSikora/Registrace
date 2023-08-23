@@ -4,7 +4,7 @@ function connection(){
     $host = "localhost";
     $user = "root";
     $password = "";
-    $db = "registration";
+    $db = "f171325";
 
     if (!($con = mysqli_connect($host,$user,$password,$db)))
 {

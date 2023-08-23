@@ -9,6 +9,7 @@
         <input type="password" name="login-password" placeholder="Heslo"><br>
         <input type="submit" value="Přihlásit">
     </form>
+    
     <?php 
     include "footer.php";
     ?>

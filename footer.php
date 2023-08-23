@@ -2,6 +2,6 @@
 <footer>
     MirSikora &copy; 2023.
 </footer>   
-<script src="passwordchecker.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

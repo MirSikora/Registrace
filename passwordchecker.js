@@ -1,25 +1,28 @@
-const password1 = document.querySelector(".password-first");
-const password2 =  document.querySelector(".password-second");
-const paragraphText =  document.querySelector(".result-text");
+"use strict";
 
-const passwordCheck = ()=>{
-    const password1Value = password1.value;
-    const password2Value = password2.value;
+/******* PASSWORD CHECKER *******/
 
-    if(password1Value === password2Value){
-        paragraphText.textContent = "Hesla jsou shodná";
-        paragraphText.classList.add("valid");
-        paragraphText.classList.remove("invalid");
-    }else{
-        paragraphText.textContent = "Hesla nejsou shodná";
-        paragraphText.classList.add("invalid");
-        paragraphText.classList.remove("valid");
-    }
+const password1 = document.querySelector(".password-first"),
+  password2 = document.querySelector(".password-second"),
+  paragraphText = document.querySelector(".result-text");
 
-    if(password1Value === "" && password2Value===""){
-        paragraphText.textContent = ""
-    }
-}
+const passwordCheck = () => {
+  const password1Value = password1.value;
+  const password2Value = password2.value;
+
+  if (password1Value === password2Value) {
+    paragraphText.textContent = "Hesla jsou shodná";
+    paragraphText.classList.add("valid");
+    paragraphText.classList.remove("invalid");
+  } else {
+    paragraphText.textContent = "Hesla nejsou shodná";
+    paragraphText.classList.add("invalid");
+    paragraphText.classList.remove("valid");
+  }
+
+  if (password1Value === "" && password2Value === "") {
+    paragraphText.textContent = "";
+  }
+};
 password1.addEventListener("input", passwordCheck);
 password2.addEventListener("input", passwordCheck);
-

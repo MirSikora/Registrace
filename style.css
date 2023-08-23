@@ -1,105 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    text-align: center;
-    height: 100vh;
-    font-size: 1.2rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;            
+  text-align: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-nav ul {    
-    width: 100%;
+nav {
     display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-around;
+    flex-direction: row-reverse;
+    background-color: rgb(17, 17, 17);
     align-items: center;
     height: 70px;
-    background-color: rgb(17, 17, 17);    
+}
+.nav-menu {
+    position: absolute;
+    top: 67px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center; 
+  background-color: rgb(17, 17, 17);
+}
+.disactive{
+    display: none;
+}
+.active{
+    display: block;
+}
+nav li{
+    margin: 15px auto;
 }
 nav a {
+  color: whitesmoke;
+  text-decoration: none;  
+}
+.menu-icon{
     color: whitesmoke;
-    text-decoration: none;   
+    font-size: 2.5rem;
+    padding-right: 15px;
 }
 main {
-    display: flex;;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
 }
-h1{
-   margin-bottom: 20px;
+h1 {
+  margin-bottom: 20px;
 }
-input{
-    border: none;
-    outline: none;
-    border-bottom: 1px solid black;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    width: 250px;
-    font-size: 1.2rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ; 
+input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  width: 250px;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 input::placeholder {
-    color: rgb(178, 178, 178);
-    font-size: 1.2rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ; 
-  }
-.result-text{
-    height: 10px;
-    font-size: 0.7rem;
-    font-weight: bold;
+  color: rgb(178, 178, 178);
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-input[type="submit"]{
-    background: goldenrod;     
-    border: none;
-    margin-top: 5px;
-    cursor: pointer;
-    transition: all 0.3s linear;
+.result-text {
+  height: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
-.warning{
-    font-size: 2rem;
-    color: red;
-    font-weight: bolder;
+input[type="submit"] {
+  background: goldenrod;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.warning {
+  font-size: 2rem;
+  color: red;
+  font-weight: bolder;
 }
 .login {
-    text-decoration: none;
-    background-color: goldenrod;
-    color: black;
-    padding: 5px 10px;
+  text-decoration: none;
+  background-color: goldenrod;
+  color: black;
+  padding: 5px 10px;
 }
-.users{
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.users {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 label {
-    color: grey;       
+  color: grey;
 }
-h3{
-    margin-bottom: 20px;
-    color: grey;  
+h3 {
+  margin-bottom: 20px;
+  color: grey;
 }
 footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    background-color: rgb(17, 17, 17);
-    color: whitesmoke;
+  position: absolute;  
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(17, 17, 17);
+  color: whitesmoke;
 }
 /* Class for javascript */
 .valid {
-    color: green;
+  color: green;
+}
+.invalid {
+  color: red;
+}
+@media (max-height: 500px) {
+  body {
+    min-height: 600px;
   }
-  .invalid {
-    color: red;    
+  main {
+    min-height: 500px;
   }
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+}
+@media (min-width: 800px) {
+    .menu-icon{
+        display: none;
+    }
+    .disactive,
+    .active{
+        display: flex;
+        position: relative;
+        top: 0px;
+        flex-direction: row;
+    }
+}
